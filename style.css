@@ -84,41 +84,53 @@ nav ul li a:focus {
   background: linear-gradient(135deg, #00B8C4 0%, #0ABAB5 100%);
   color: #F6EFE8;
   padding: 6rem 1.5rem 8rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 650px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 900;
-  margin-bottom: 1rem;
+  letter-spacing: 4px;
+  margin-bottom: 0.5rem;
+  color: #00B8C4;
+  text-transform: uppercase;
   text-shadow: 1px 1px 6px rgba(0,0,0,0.25);
 }
 
-.hero p {
-  font-size: 1.25rem;
-  max-width: 650px;
-  margin: 0 auto 2rem auto;
+.hero .subheadline {
+  font-size: 1.5rem;
   font-weight: 500;
-  line-height: 1.4;
+  font-style: italic;
+  margin-bottom: 2rem;
+  color: #F6EFE8;
+  text-shadow: 0 0 8px rgba(0,184,196,0.7);
 }
 
 .hero .btn-primary {
   background-color: #F6EFE8; /* Cream */
   color: #4B3621; /* Espresso */
-  padding: 0.85rem 3rem;
+  padding: 1rem 3rem;
   border: none;
   border-radius: 50px;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   cursor: pointer;
   box-shadow: 0 6px 10px rgba(0,0,0,0.1);
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-  align-self: center;
-  max-width: 220px;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .hero .btn-primary:hover,
@@ -127,6 +139,18 @@ nav ul li a:focus {
   color: #F6EFE8;
   transform: scale(1.05);
   outline: none;
+}
+
+/* Simple fade in up animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* SECTIONS - About, Menu, Mission, Contact */
@@ -337,7 +361,6 @@ footer {
 /* RESPONSIVE */
 
 /* Mobile Nav: Hamburger toggling would be implemented in JS if needed. For now, nav is horizontal on desktop and smaller screens. */
-
 @media (max-width: 768px) {
   nav .container {
     flex-wrap: wrap;
@@ -351,11 +374,18 @@ footer {
   }
 
   .hero h1 {
-    font-size: 2.25rem;
+    font-size: 2.75rem;
+    letter-spacing: 3px;
   }
 
-  .hero p {
+  .hero .subheadline {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero .btn-primary {
     font-size: 1rem;
+    padding: 0.85rem 2.5rem;
   }
 
   section h2 {
@@ -377,11 +407,17 @@ footer {
   }
 
   .hero h1 {
-    font-size: 1.75rem;
+    font-size: 2rem;
+    letter-spacing: 2px;
   }
 
-  .hero p {
-    font-size: 0.9rem;
+  .hero .subheadline {
+    font-size: 1.1rem;
+  }
+
+  .hero .btn-primary {
+    width: 100%;
+    padding: 1rem 0;
   }
 
   .newsletter form {
