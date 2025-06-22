@@ -1,55 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- 🔤 Page Title -->
   <title>Xollent Coffee | Crafted Focus for Creative Minds</title>
-
-  <!-- 📝 Meta Description for SEO -->
   <meta name="description" content="Xollent Coffee is a premium organic coffee blend designed to fuel creativity and focus. Crafted for artists, makers, and innovators who demand clarity in every cup.">
 
-  <!-- ☕ Favicon -->
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon/XOLLENTCOFFEEFAVICON.png" sizes="512x512">
 
-  <!-- 🎨 Styles & Fonts -->
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <h1>Xollent</h1>
-    <p>Crafted Focus for Creative Minds</p>
-    <a href="#email-signup" class="cta-button">Join the creative crew</a>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">XOLLENT</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Our Coffee</a></li>
+        <li><a href="#mission">Our Mission</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <header class="hero-section">
+    <div class="hero-content">
+      <h1>Fuel Your Flow</h1>
+      <p>Organic Coffee for Creative Minds</p>
+      <a href="#menu" class="cta-button">Explore Our Blend</a>
+    </div>
   </header>
 
-  <section class="product-preview">
-    <h2>Built for Creators</h2>
-    <p>Xollent Coffee is crafted for designers, producers, writers, and makers. Our organic medium roast is infused with lion's mane extract to spark clarity, creativity, and clean energy — anytime you create.</p>
-  </section>
-
-  <section class="product-preview">
-    <h2>Our Hero Blend</h2>
-    <div>
-      <h3>Xollent Original</h3>
-      <p>Organic, single-origin coffee with functional brain-boosting adaptogens. Designed for flow, without the crash.</p>
-      <a href="#" class="cta-button">Preorder Coming Soon</a>
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <h2>Why Xollent?</h2>
+      <p>We’re not just coffee. We’re a catalyst for creators. Whether you’re sketching a masterpiece, mixing your next hit, or drafting your next book, Xollent delivers clean, sustained energy with organic ingredients and brain-boosting adaptogens.</p>
     </div>
   </section>
 
-  <section class="product-preview" id="email-signup">
-    <h2>Stay in the Loop</h2>
-    <p>Be the first to know when Xollent drops. No spam, just clarity.</p>
-    <form>
-      <input type="email" placeholder="Your email" required>
-      <button type="submit" class="cta-button">Notify Me</button>
-    </form>
+  <!-- Menu Section -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <h2>Our Coffee Blends</h2>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <h3>Xollent Original</h3>
+          <p>Medium roast with lion's mane and chaga. Boost focus without the crash.</p>
+        </div>
+        <div class="menu-item">
+          <h3>Midnight Muse</h3>
+          <p>Dark roast with reishi and cacao. Rich, bold, and calming for late-night creators.</p>
+        </div>
+        <div class="menu-item">
+          <h3>Bright Start</h3>
+          <p>Light roast with cordyceps and turmeric. Invigorating and mood-lifting.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Xollent Coffee. Made for creatives.</p>
+  <!-- Mission Section -->
+  <section class="mission-section" id="mission">
+    <div class="container">
+      <h2>Our Mission</h2>
+      <p>We're committed to empowering creative minds through ethically sourced coffee, sustainable packaging, and a community-first approach. Every cup of Xollent supports local growers and global creatives.</p>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <section class="signup-section" id="contact">
+    <div class="container">
+      <h2>Join the Creative Crew</h2>
+      <p>Be the first to know when new blends drop, merch launches, and events happen.</p>
+      <form class="signup-form">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Notify Me</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Xollent Coffee. Made for Creatives. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
