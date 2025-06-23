@@ -11,88 +11,114 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cart.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<!-- Navbar -->
-<nav>
-  <div class="container">
-    <a href="#" class="logo">XOLLENT</a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#menu">Our Coffee</a></li>
-      <li><a href="#mission">Our Mission</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+  <!-- Navbar -->
+  <nav aria-label="Main navigation">
+    <div class="container">
+      <a href="#" class="logo">XOLLENT</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Our Coffee</a></li>
+        <li><a href="#mission">Our Mission</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<!-- Hero Section -->
-<section class="hero" aria-label="Hero Section">
-  <div class="container hero-content">
-    <h1>Fuel Your Flow</h1>
-    <p class="subheadline">Organic Coffee for Creative Minds</p>
-    <a href="#menu" class="btn-primary" role="button" aria-label="Explore Our Coffee Blend">Explore Our Blend</a>
-  </div>
-</section>
-
-  </header>
+  <!-- Hero Section -->
+  <section class="hero" aria-label="Hero Section">
+    <div class="container hero-content">
+      <h1>Crafted Focus for Creative Minds</h1>
+      <p class="subheadline">Organic Coffee for Creative Minds</p>
+      <a href="#menu" class="btn-primary" role="button" aria-label="Explore Our Coffee Blend">Explore Our Blend</a>
+    </div>
+  </section>
 
   <!-- About Section -->
-  <section class="about-section" id="about">
+  <section class="about-section" id="about" aria-labelledby="about-heading">
     <div class="container">
-      <h2>Why Xollent?</h2>
+      <h2 id="about-heading">Why Xollent?</h2>
       <p>We’re not just coffee. We’re a catalyst for creators. Whether you’re sketching a masterpiece, mixing your next hit, or drafting your next book, Xollent delivers clean, sustained energy with organic ingredients and brain-boosting adaptogens.</p>
     </div>
   </section>
 
   <!-- Menu Section -->
-  <section class="menu-section" id="menu">
+  <section class="menu-section" id="menu" aria-labelledby="menu-heading">
     <div class="container">
-      <h2>Our Coffee Blends</h2>
-      <div class="menu-grid">
+      <h2 id="menu-heading">Our Coffee Blends</h2>
+      <div class="menu-items">
+
+        <!-- Xollent Original -->
         <div class="menu-item">
+          <img src="images/xollent-original.jpg" alt="Xollent Original Coffee" class="menu-image">
           <h3>Xollent Original</h3>
           <p>Medium roast with lion's mane and chaga. Boost focus without the crash.</p>
+          <a href="#" class="btn-primary add-to-cart" data-product="Xollent Original" data-price="19.99">Add to Cart</a>
         </div>
+
+        <!-- Midnight Muse -->
         <div class="menu-item">
+          <img src="images/midnight-muse.jpg" alt="Midnight Muse Coffee" class="menu-image">
           <h3>Midnight Muse</h3>
           <p>Dark roast with reishi and cacao. Rich, bold, and calming for late-night creators.</p>
+          <a href="#" class="btn-primary add-to-cart" data-product="Midnight Muse" data-price="22.99">Add to Cart</a>
         </div>
+
+        <!-- Bright Start -->
         <div class="menu-item">
+          <img src="images/bright-start.jpg" alt="Bright Start Coffee" class="menu-image">
           <h3>Bright Start</h3>
           <p>Light roast with cordyceps and turmeric. Invigorating and mood-lifting.</p>
+          <a href="#" class="btn-primary add-to-cart" data-product="Bright Start" data-price="21.99">Add to Cart</a>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- Mission Section -->
-  <section class="mission-section" id="mission">
+  <section class="mission-section" id="mission" aria-labelledby="mission-heading">
     <div class="container">
-      <h2>Our Mission</h2>
+      <h2 id="mission-heading">Our Mission</h2>
       <p>We're committed to empowering creative minds through ethically sourced coffee, sustainable packaging, and a community-first approach. Every cup of Xollent supports local growers and global creatives.</p>
     </div>
   </section>
 
   <!-- Newsletter Signup -->
-  <section class="signup-section" id="contact">
+  <section class="signup-section" id="contact" aria-labelledby="signup-heading">
     <div class="container">
-      <h2>Join the Creative Crew</h2>
+      <h2 id="signup-heading">Join the Creative Crew</h2>
       <p>Be the first to know when new blends drop, merch launches, and events happen.</p>
       <form class="signup-form">
         <input type="email" placeholder="Your email" required>
-        <button type="submit">Notify Me</button>
+        <button type="submit" class="btn-primary">Notify Me</button>
       </form>
     </div>
   </section>
 
+  <!-- Cart Modal HTML -->
+  <div id="cart-modal" class="cart-modal hidden" aria-hidden="true">
+    <div class="cart-content" role="dialog" aria-modal="true" aria-labelledby="cart-heading">
+      <h3 id="cart-heading">Your Cart</h3>
+      <ul id="cart-items"></ul>
+      <p>Total: $<span id="cart-total">0.00</span></p>
+      <a href="https://yourdripshippercheckout.com" class="btn-primary" target="_blank">Proceed to Checkout</a>
+      <button id="close-cart" class="btn-secondary">Close</button>
+    </div>
+  </div>
+
   <!-- Footer -->
-  <footer class="site-footer">
+  <footer class="site-footer" aria-label="Footer">
     <div class="container">
       <p>&copy; 2025 Xollent Coffee. Made for Creatives. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Scripts -->
+  <script src="cart.js" defer></script>
 </body>
 </html>
