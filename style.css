@@ -17,6 +17,32 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+<script>
+  const modal = document.getElementById("videoModal");
+  const btn = document.getElementById("playAdBtn");
+  const closeBtn = document.querySelector(".close");
+  const video = document.getElementById("xollentAd");
+
+  btn.onclick = () => {
+    modal.style.display = "flex";
+    video.play();
+  };
+
+  closeBtn.onclick = () => {
+    modal.style.display = "none";
+    video.pause();
+    video.currentTime = 0;
+  };
+
+  window.onclick = (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+      video.pause();
+      video.currentTime = 0;
+    }
+  };
+</script>
+
 body {
   line-height: 1.6;
   min-height: 100vh;
