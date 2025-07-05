@@ -440,3 +440,63 @@ footer {
     width: 100%;
   }
 }
+
+/* === VIDEO MODAL STYLES === */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85); /* Dimmed backdrop */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  animation: fadeIn 0.5s ease;
+}
+
+.modal video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+}
+
+.close {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+/* Button Style */
+.watch-ad-button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  background-color: var(--primary-cyan, #00fff0);
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background 0.3s ease;
+}
+
+.watch-ad-button:hover {
+  background-color: #00d6c4;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
