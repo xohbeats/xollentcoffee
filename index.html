@@ -107,17 +107,52 @@
   </section>
 
 <!-- Newsletter Signup -->
-<section class="signup-section" id="contact">
-  <div class="container">
-    <h2>Join the Creative Crew</h2>
-    <p>Be the first to know when new blends drop, merch launches, and events happen.</p>
-    <form class="signup-form">
-      <input type="text" name="FNAME" placeholder="Your first name (optional)" />
-      <input type="email" name="EMAIL" placeholder="Your email" required />
-      <button type="submit" class="btn-primary">Notify Me</button>
-    </form>
-  </div>
+<section class="signup-section" id="contact" style="background:#121212; padding: 3rem 1rem; color: #eee; font-family: 'Orbitron', sans-serif; max-width: 420px; margin: 0 auto; border-radius: 12px;">
+  <h2 style="color: #0ff; font-weight: 700; text-align: center; margin-bottom: 1rem;">Join the Creative Crew</h2>
+  <p style="text-align: center; margin-bottom: 2rem;">Be the first to know when new blends drop, merch launches, and events happen.</p>
+
+  <form action="https://gmail.us17.list-manage.com/subscribe/post?u=2c84de1626c94f691cf23fa67&amp;id=bb06cc2619&amp;f_id=0048fee2f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    
+    <input type="text" name="FNAME" id="mce-FNAME" placeholder="Your first name (optional)" style="width: 100%; padding: 0.75rem; margin-bottom: 1rem; border-radius: 6px; border: 1px solid #0ff; background: #222; color: #eee; font-size: 1rem; font-family: 'Orbitron', sans-serif;" />
+    
+    <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Your email" required style="width: 100%; padding: 0.75rem; margin-bottom: 1rem; border-radius: 6px; border: 1px solid #0ff; background: #222; color: #eee; font-size: 1rem; font-family: 'Orbitron', sans-serif;" />
+    
+    <!-- Honeypot anti-spam -->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+      <input type="text" name="b_2c84de1626c94f691cf23fa67_bb06cc2619" tabindex="-1" value="">
+    </div>
+    
+    <button type="submit" id="mc-embedded-subscribe" class="btn-primary" style="background: #0ff; color: #121212; font-weight: 700; border: none; border-radius: 6px; padding: 0.75rem 1.5rem; cursor: pointer; width: 100%; font-family: 'Orbitron', sans-serif; font-size: 1.1rem;">Subscribe</button>
+    
+    <!-- Success/Error messages -->
+    <div id="mce-responses" class="clear" style="margin-top: 1rem; font-family: 'Orbitron', sans-serif;">
+      <div class="response" id="mce-error-response" style="display:none; color: #ff5555; font-weight: 700;"></div>
+      <div class="response" id="mce-success-response" style="display:none; color: #0ff; font-weight: 700;"></div>
+    </div>
+
+  </form>
+
+  <p style="margin-top: 1.5rem; font-size: 0.85rem; color: #666; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    We respect your privacy. No spam, ever.
+  </p>
 </section>
+
+<!-- Include Mailchimp validation script -->
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+<script type="text/javascript">
+  (function($) {
+    window.fnames = new Array(); window.ftypes = new Array();
+    fnames[0]='EMAIL';ftypes[0]='email';
+    fnames[1]='FNAME';ftypes[1]='text';
+    fnames[2]='LNAME';ftypes[2]='text';
+    fnames[3]='ADDRESS';ftypes[3]='address';
+    fnames[4]='PHONE';ftypes[4]='phone';
+    fnames[5]='BIRTHDAY';ftypes[5]='birthday';
+    fnames[6]='COMPANY';ftypes[6]='text';
+  }(jQuery));
+  var $mcj = jQuery.noConflict(true);
+</script>
+
 
   <!-- Cart Modal -->
   <div id="cart-modal" class="cart-modal hidden" aria-hidden="true">
