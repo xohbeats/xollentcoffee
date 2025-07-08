@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet The Creatives | Xollent Coffee</title>
+  <link rel="stylesheet" href="css/creatives.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="logo">XOLLENT</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#submit">Submit Review</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <h1>Meet The Creatives</h1>
+      <p class="subheadline">Your coffee. Your vibe. Your story.</p>
+    </div>
+  </section>
+
+  <section class="form-section" id="submit">
+    <div class="container">
+      <h2>Submit Your Review</h2>
+      <form id="reviewForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <textarea id="reviewText" placeholder="Write your review..." required></textarea>
+        <input type="file" id="mediaUpload" accept=".jpg,.jpeg,.png,.mp4" />
+        <button type="submit">Send It ☕</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="reviews-section">
+    <div class="container">
+      <h2>Creator Submissions</h2>
+      <div id="reviewDisplay" class="review-grid"></div>
+    </div>
+  </section>
+
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="js/creatives.js" defer></script>
+</body>
+</html>
