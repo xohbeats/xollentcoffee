@@ -17,7 +17,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 body {
   line-height: 1.6;
   min-height: 100vh;
@@ -441,4 +440,88 @@ footer {
     width: 100%;
   }
 
-  
+ /* HERO SECTION with Background Video Overlay */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 90vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #00B8C4 0%, #0ABAB5 100%); /* fallback gradient */
+  color: #F6EFE8;
+  padding: 6rem 1.5rem 8rem;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 255, 255, 0.1); /* subtle teal */
+  backdrop-filter: brightness(60%) blur(1.5px);
+  z-index: 1;
+}
+
+.hero-content {
+  max-width: 650px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 4px;
+  margin-bottom: 0.5rem;
+  color: #00B8C4;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.25);
+}
+
+.hero .subheadline {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 2rem;
+  color: #F6EFE8;
+  text-shadow: 0 0 8px rgba(0,184,196,0.7);
+}
+
+.hero .btn-primary {
+  background-color: #F6EFE8;
+  color: #4B3621;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.hero .btn-primary:hover,
+.hero .btn-primary:focus {
+  background-color: #0ABAB5;
+  color: #F6EFE8;
+  transform: scale(1.05);
+  outline: none;
+} 
