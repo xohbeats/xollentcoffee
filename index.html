@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Xollent Coffee | Crafted Focus for Creative Minds</title>
   <meta name="description" content="Xollent Coffee offers premium small-batch coffee blends, roasted fresh and shipped direct. Designed to energize creators, night owls, and makers alike.">
 
@@ -10,117 +10,118 @@
   <link rel="icon" type="image/png" href="favicon/XOLLENTCOFFEEFAVICON.png" sizes="512x512">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="cart.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="cart.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
   <!-- Navbar -->
-<ul class="nav-links">
-  <li><a href="#about">About</a></li>
-  <li><a href="#menu">Our Coffee</a></li>
-  <li><a href="#mission">Our Mission</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="meet-the-creatives.html">**Meet The Creatives**</a></li> <!-- 👈 New Link -->
-</ul>
+  <nav>
+    <div class="container">
+      <a href="#" class="logo">XOLLENT</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Our Coffee</a></li>
+        <li><a href="#mission">Our Mission</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="meet-the-creatives.html">Meet The Creatives</a></li>
+      </ul>
     </div>
   </nav>
 
-<!-- Hero Section -->
-<section class="hero" aria-label="Hero Section">
-  <!-- 🎬 Background Video -->
-  <video autoplay muted loop playsinline class="bg-video">
-    <source src="xollentcoffee.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <!-- Hero Section (Teal & Text-Based Only) -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h1>Crafted Focus for Creative Minds</h1>
+      <p class="subheadline">Xollent = Premium, Creative-Fueled Coffees</p>
+      <a href="#menu" class="btn-primary" role="button">Explore Our Blend</a>
+    </div>
+  </section>
 
-  <!-- 🔵 Teal Overlay -->
-  <div class="video-overlay"></div>
-
-  <!-- ✨ Hero Content Over Video -->
-  <div class="container hero-content">
-    <h1>Crafted Focus for Creative Minds</h1>
-    <p class="subheadline">Xollent = Premium, Creative-Fueled Coffees</p>
-    <a href="#menu" class="btn-primary" role="button" aria-label="Explore Our Coffee Blend">Explore Our Blend</a>
-  </div>
-</section>
-  
-  <!-- About Section -->
-  <section class="about-section" id="about" aria-labelledby="about-heading">
+  <!-- Video Section (Dedicated) -->
+  <section class="video-highlight" aria-label="Brand Showcase Video">
     <div class="container">
-      <h2 id="about-heading">Why Xollent?</h2>
+      <video controls muted playsinline style="width: 100%; height: auto; border-radius: 12px;">
+        <source src="xollentcoffee.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <h2>Why Xollent?</h2>
       <p>Hey, I’m D’Andre Spears — but you might know me as XoH! Beats. I started Xollent Coffee right here in my creative space, the same studio where I produce music, write stories, and bring ideas to life. This brand was born during one of those long, late nights — you know the kind — where inspiration strikes, but only if you’re locked in and fueled up.
 
-As a music producer, storyteller, and content creator, I’ve spent years building, publishing, and connecting with creatives all over the world. From crafting type beats for artists like Juice WRLD to dropping immersive horror stories and building the Aimagine Network, I’ve always chased what lights me up — and now, I want to fuel your spark too.
+      Xollent Coffee is for us — the creators, the night owls, the early risers, and everyone chasing something bigger. I’m proud to say every blend is thoughtfully chosen, small-batch roasted, and made with people like you in mind.
 
-Xollent Coffee is for us — the creators, the night owls, the early risers, and everyone chasing something bigger. I’m proud to say every blend is thoughtfully chosen, small-batch roasted, and made with people like you in mind. So when you sip Xollent, you're not just drinking coffee — you’re fueling your own creative story.
-
-Thanks for trusting my brand. I’ve got you every step of the way.
-— D’Andre / XoH! Beats ☕✨ 
-        It's more than a cup of coffee—we're your creative spark. Whether you're writing your next track or editing a film, Xollent delivers smooth, bold, and energizing brews crafted to keep your ideas flowing, without compromise.</p>
+      Thanks for trusting my brand. I’ve got you every step of the way.
+      — D’Andre / XoH! Beats ☕✨
+      </p>
     </div>
   </section>
 
   <!-- Menu Section -->
-  <section class="menu-section" id="menu" aria-labelledby="menu-heading">
+  <section class="menu-section" id="menu">
     <div class="container">
-      <h2 id="menu-heading">Our Coffee Blends</h2>
+      <h2>Our Coffee Blends</h2>
       <div class="menu-items">
 
-       <!-- The Creative-->
-<div class="menu-item">
-  <img src="original.png" alt="The Creative" class="menu-image">
-  <h3>The Creative</h3>
-  <p>A smooth, balanced roast crafted to energize creators from the first sip to the final spark.</p>
-  <a href="#" class="btn-primary add-to-cart" data-product="The Creative" data-price="19.99">Add to Cart</a>
-</div>
+        <!-- The Creative -->
+        <div class="menu-item">
+          <img src="original.png" alt="The Creative" class="menu-image" />
+          <h3>The Creative</h3>
+          <p>A smooth, balanced roast crafted to energize creators from the first sip to the final spark.</p>
+          <a href="#" class="btn-primary add-to-cart" data-product="The Creative" data-price="19.99">Add to Cart</a>
+        </div>
 
-<!-- Rhythmic Cocoa -->
-<div class="menu-item">
-  <img src="cocoa.png" alt="Rhythmic Cocoa" class="menu-image">
-  <h3>Rhythmic Cocoa</h3>
-  <p>Rich, comforting cocoa made for chill nights, editing sessions, or creative resets. No jitters, just vibes.</p>
-  <a href="#" class="btn-primary add-to-cart" data-product="Rhythmic Cocoa" data-price="17.99">Add to Cart</a>
-</div>
+        <!-- Rhythmic Cocoa -->
+        <div class="menu-item">
+          <img src="cocoa.png" alt="Rhythmic Cocoa" class="menu-image" />
+          <h3>Rhythmic Cocoa</h3>
+          <p>Rich, comforting cocoa made for chill nights, editing sessions, or creative resets. No jitters, just vibes.</p>
+          <a href="#" class="btn-primary add-to-cart" data-product="Rhythmic Cocoa" data-price="17.99">Add to Cart</a>
+        </div>
 
-<!-- Morning Tempo -->
-<div class="menu-item">
-  <img src="morning.png" alt="Bright Start Coffee" class="menu-image">
-  <h3>Morning Tempo</h3>
-  <p>Ease into your flow with a mellow roast made for mindful mornings, without the jitters.</p>
-  <a href="#" class="btn-primary add-to-cart" data-product="Morning Tempo" data-price="21.99">Add to Cart</a>
-</div>
-
+        <!-- Morning Tempo -->
+        <div class="menu-item">
+          <img src="morning.png" alt="Morning Tempo" class="menu-image" />
+          <h3>Morning Tempo</h3>
+          <p>Ease into your flow with a mellow roast made for mindful mornings, without the jitters.</p>
+          <a href="#" class="btn-primary add-to-cart" data-product="Morning Tempo" data-price="21.99">Add to Cart</a>
+        </div>
 
       </div>
     </div>
   </section>
 
   <!-- Mission Section -->
-  <section class="mission-section" id="mission" aria-labelledby="mission-heading">
+  <section class="mission-section" id="mission">
     <div class="container">
-      <h2 id="mission-heading">Our Mission</h2>
+      <h2>Our Mission</h2>
       <p>Xollent exists to power up creative minds everywhere. We partner with trusted U.S. roasters to deliver fresh, small-batch coffee with ethical sourcing and fast shipping—so your inspiration never has to wait for a refill.</p>
     </div>
   </section>
 
   <!-- Newsletter Signup -->
-  <section class="signup-section" id="contact" aria-labelledby="signup-heading">
+  <section class="signup-section" id="contact">
     <div class="container">
-      <h2 id="signup-heading">Join the Creative Crew</h2>
+      <h2>Join the Creative Crew</h2>
       <p>Be the first to know when new blends drop, merch launches, and events happen.</p>
       <form class="signup-form">
-        <input type="email" placeholder="Your email" required>
+        <input type="email" placeholder="Your email" required />
         <button type="submit" class="btn-primary">Notify Me</button>
       </form>
     </div>
   </section>
 
-  <!-- Cart Modal HTML -->
+  <!-- Cart Modal -->
   <div id="cart-modal" class="cart-modal hidden" aria-hidden="true">
-    <div class="cart-content" role="dialog" aria-modal="true" aria-labelledby="cart-heading">
-      <h3 id="cart-heading">Your Cart</h3>
+    <div class="cart-content" role="dialog" aria-modal="true">
+      <h3>Your Cart</h3>
       <ul id="cart-items"></ul>
       <p>Total: $<span id="cart-total">0.00</span></p>
       <a href="https://yourdripshippercheckout.com" class="btn-primary" target="_blank">Proceed to Checkout</a>
@@ -129,7 +130,7 @@ Thanks for trusting my brand. I’ve got you every step of the way.
   </div>
 
   <!-- Footer -->
-  <footer class="site-footer" aria-label="Footer">
+  <footer class="site-footer">
     <div class="container">
       <p>&copy; 2025 Xollent Coffee. Made for Creatives. All rights reserved.</p>
     </div>
