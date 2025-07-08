@@ -79,17 +79,42 @@ nav ul li a:focus {
   outline: none;
 }
 
-/* HERO SECTION */
+/* HERO SECTION with Background Video Overlay */
 .hero {
-  background: linear-gradient(135deg, #00B8C4 0%, #0ABAB5 100%);
-  color: #F6EFE8;
-  padding: 6rem 1.5rem 8rem;
-  min-height: 75vh;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #00B8C4 0%, #0ABAB5 100%); /* fallback gradient */
+  color: #F6EFE8;
+  padding: 6rem 1.5rem 8rem;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 1;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 255, 255, 0.1); /* subtle teal */
+  backdrop-filter: brightness(60%) blur(1.5px);
+  z-index: 0;
 }
 
 .hero-content {
@@ -97,6 +122,8 @@ nav ul li a:focus {
   margin: 0 auto;
   animation: fadeInUp 1s ease forwards;
   opacity: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {
@@ -119,8 +146,8 @@ nav ul li a:focus {
 }
 
 .hero .btn-primary {
-  background-color: #F6EFE8; /* Cream */
-  color: #4B3621; /* Espresso */
+  background-color: #F6EFE8;
+  color: #4B3621;
   padding: 1rem 3rem;
   border: none;
   border-radius: 50px;
