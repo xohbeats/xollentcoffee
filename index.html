@@ -38,20 +38,25 @@
     </div>
   </section>
 
-  <!-- 🔘 Trigger Button -->
-<button id="playAdBtn" class="watch-ad-button">🎥 Watch Xollent Coffee Ad</button>
+<!-- Hero Section -->
+<section class="hero" aria-label="Hero Section">
+  <!-- 🎬 Background Video -->
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="xollentcoffee.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
-<!-- 🎬 Fullscreen Video Modal -->
-<div id="videoModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <video id="xollentAd" controls autoplay>
-      <source src="xollentcoffee.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+  <!-- 🔵 Teal Overlay -->
+  <div class="video-overlay"></div>
+
+  <!-- ✨ Hero Content Over Video -->
+  <div class="container hero-content">
+    <h1>Crafted Focus for Creative Minds</h1>
+    <p class="subheadline">Xollent = Premium, Creative-Fueled Coffees</p>
+    <a href="#menu" class="btn-primary" role="button" aria-label="Explore Our Coffee Blend">Explore Our Blend</a>
   </div>
-</div>
-
+</section>
+  
   <!-- About Section -->
   <section class="about-section" id="about" aria-labelledby="about-heading">
     <div class="container">
