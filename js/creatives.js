@@ -25,3 +25,38 @@ const storage = getStorage(app);
 
 // Export the initialized services for use in other modules
 export { db, storage };
+
+async function loadProducts() {
+  const container = document.getElementById('product-gallery');
+  container.innerHTML = '<p>Loading products...</p>';
+
+  try {
+    const response = await fetch('/api/products'); // <-- Uses your backend proxy API
+    const data = await response.json();
+    const products = data.result || [];
+
+    if (products.length === 0) {
+      container.innerHTML = '<p>No products found.</p>';
+      return;
+    }
+
+    container.innerHTML = ''; // Clear loading
+
+    products.forEach(product => {
+      const card = document.createElement('div');
+      card.className = 'product-card';
+
+      card.innerHTML = `
+        <img src="${product.thumbnail_url}" alt="${product.name}" />
+        <h3>${product.name}</h3>
+        <p>$14</p>
+      `;
+
+      container.appendChild(card);
+    });
+  } catch (err) {
+    container.innerHTML = `<p>Error loading products: ${err.message}</p>`;
+  }
+}
+
+window.addEventListener('DOMContentLoaded', loadProducts);
