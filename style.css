@@ -239,8 +239,11 @@ section h2::after {
   border-radius: 1rem;
   padding: 1.5rem;
   text-align: center;
-  box-shadow: 0 0 12px var(--card-shadow);
+  /* Removed black border box */
+  box-shadow: none;
+  position: relative; /* needed for glow effect */
   transition: transform 0.3s ease;
+  overflow: visible; /* to allow glow to show outside */
 }
 
 .menu-item:hover,
@@ -248,6 +251,7 @@ section h2::after {
   transform: translateY(-5px);
 }
 
+/* Neon Glow container around images */
 .menu-image,
 .product-card img {
   width: 100%;
@@ -255,8 +259,22 @@ section h2::after {
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  transition: box-shadow 0.3s ease;
 }
 
+/* Neon glow effect on hover around images */
+.menu-item:hover .menu-image,
+.product-card:hover img {
+  box-shadow:
+    0 0 8px var(--accent),
+    0 0 20px var(--accent),
+    0 0 30px var(--accent-dark),
+    0 0 40px var(--accent-dark);
+}
+
+/* Text styling */
 .menu-item h3,
 .product-card h3 {
   font-size: 1.25rem;
