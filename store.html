@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Xollent Coffee Store</title>
+  <style>
+    /* Simple styles */
+    .product-card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 12px;
+      margin: 10px;
+      max-width: 200px;
+      text-align: center;
+    }
+    .product-card img {
+      max-width: 100%;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Xollent Coffee Store</h1>
+  <div id="product-gallery">Loading products...</div>
+
+  <script>
+    async function loadProducts() {
+      const container = document.getElementById('product-gallery');
+      try {
+        const response = await fetch('/api/products');
+        if (!response.ok) throw new Error('Failed to fetch products');
+
+        const data = await response.json();
+
+        if (data.error) throw new Error(data.error.message || 'API Error');
+
+        const products = data.result || [];
+        container.innerHTML = '';
+
+        if (products.length === 0) {
+          container.innerHTML = '<p>No products found.</p>';
+          return;
+        }
+
+        products.forEach(product => {
+          const card = document.createElement('div');
+          card.className = 'product-card';
+          card.innerHTML = `
+            <img src="${product.thumbnail_url}" alt="${product.name}" />
+            <h3>${product.name}</h3>
+            <p>Price: $14</p>
+          `;
+          container.appendChild(card);
+        });
+      } catch (err) {
+        container.innerHTML = `<p>Error loading products: ${err.message}</p>`;
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', loadProducts);
+  </script>
+</body>
+</html>
