@@ -1,101 +1,149 @@
-<!-- Coffee Menu Section -->
-<section class="shopify-menu-section" id="menu">
-  <div class="container">
-    <h2 class="menu-title">Our Coffee Blends</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Coffee Blends | Xollent Coffee</title>
+  <meta name="description" content="Explore Xollent's premium small-batch coffee blends, crafted to fuel creative minds.">
 
-    <div class="shopify-product-grid">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon/XOLLENTCOFFEEFAVICON.png" sizes="512x512" />
 
-      <!-- Product 1: Morning Tempo -->
-      <div class="shopify-product-card">
-        <div id="product-component-morning-tempo"></div>
-      </div>
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+</head>
 
-      <!-- Product 2: The Creative -->
-      <div class="shopify-product-card">
-        <div id="product-component-the-creative"></div>
-      </div>
+<body class="our-coffee">
 
-      <!-- Product 3: Rhythmic Cocoa -->
-      <div class="shopify-product-card">
-        <div id="product-component-rhythmic-cocoa"></div>
-      </div>
-
+  <!-- Navbar -->
+  <nav>
+    <div class="container">
+      <a href="index.html" class="logo">XOLLENT</a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="our-coffee.html" class="active">Our Coffee</a></li>
+        <li><a href="index.html#mission">Our Mission</a></li>
+        <li><a href="index.html#join-the-creatives">Join The Creatives</a></li>
+        <li><a href="meet-the-creatives.html">Meet The Creatives</a></li>
+      </ul>
     </div>
-  </div>
-</section>
+  </nav>
 
-<script type="text/javascript">
-(function () {
-  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-  if (window.ShopifyBuy) {
-    if (window.ShopifyBuy.UI) {
-      ShopifyBuyInit();
+  <!-- Coffee Blends Section -->
+  <main>
+    <h1 class="our-coffee-header">Our Coffee Blends</h1>
+    <p class="our-coffee-subtext">Hand-roasted for creators, by creators.</p>
+
+    <!-- Shopify Menu Section -->
+    <section class="shopify-menu-section" id="menu">
+      <div class="container">
+        <h2 class="menu-title">Shop All Blends</h2>
+
+        <div class="shopify-product-grid">
+
+          <!-- Product 1: Morning Tempo -->
+          <div class="shopify-product-card">
+            <div id="product-component-morning-tempo"></div>
+          </div>
+
+          <!-- Product 2: The Creative -->
+          <div class="shopify-product-card">
+            <div id="product-component-the-creative"></div>
+          </div>
+
+          <!-- Product 3: Rhythmic Cocoa -->
+          <div class="shopify-product-card">
+            <div id="product-component-rhythmic-cocoa"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Optional Footer -->
+  <footer style="text-align: center; margin-top: 4rem; padding: 2rem; color: #6f4e37;">
+    &copy; 2025 Xollent Coffee. Crafted for Creatives.
+  </footer>
+
+  <!-- Shopify Buy Button Script -->
+  <script type="text/javascript">
+  (function () {
+    var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+    if (window.ShopifyBuy) {
+      if (window.ShopifyBuy.UI) {
+        ShopifyBuyInit();
+      } else {
+        loadScript();
+      }
     } else {
       loadScript();
     }
-  } else {
-    loadScript();
-  }
 
-  function loadScript() {
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = scriptURL;
-    (document.head || document.body).appendChild(script);
-    script.onload = ShopifyBuyInit;
-  }
+    function loadScript() {
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = scriptURL;
+      (document.head || document.body).appendChild(script);
+      script.onload = ShopifyBuyInit;
+    }
 
-  function ShopifyBuyInit() {
-    var client = ShopifyBuy.buildClient({
-      domain: 'audqzb-5a.myshopify.com',
-      storefrontAccessToken: '9a6d8ac773cefc6d62bd48478560449f',
-    });
+    function ShopifyBuyInit() {
+      var client = ShopifyBuy.buildClient({
+        domain: 'audqzb-5a.myshopify.com',
+        storefrontAccessToken: '9a6d8ac773cefc6d62bd48478560449f',
+      });
 
-    ShopifyBuy.UI.onReady(client).then(function (ui) {
-      const products = [
-        {
-          id: '10126104396088', // Morning Tempo
-          nodeId: 'product-component-morning-tempo'
-        },
-        {
-          id: '10126104428856', // The Creative (Xollent Brew)
-          nodeId: 'product-component-the-creative'
-        },
-        {
-          id: '10126104461624', // Rhythmic Cocoa
-          nodeId: 'product-component-rhythmic-cocoa'
-        }
-      ];
+      ShopifyBuy.UI.onReady(client).then(function (ui) {
+        const products = [
+          {
+            id: '10126104396088', // Morning Tempo
+            nodeId: 'product-component-morning-tempo'
+          },
+          {
+            id: '10126104428856', // The Creative
+            nodeId: 'product-component-the-creative'
+          },
+          {
+            id: '10126104461624', // Rhythmic Cocoa
+            nodeId: 'product-component-rhythmic-cocoa'
+          }
+        ];
 
-      products.forEach(product => {
-        ui.createComponent('product', {
-          id: product.id,
-          node: document.getElementById(product.nodeId),
-          moneyFormat: '%24%7B%7Bamount%7D%7D',
-          options: {
-            product: {
-              styles: {
-                product: {
-                  "@media (min-width: 601px)": {
-                    "max-width": "100%",
-                    "margin": "0 auto",
+        products.forEach(product => {
+          ui.createComponent('product', {
+            id: product.id,
+            node: document.getElementById(product.nodeId),
+            moneyFormat: '%24%7B%7Bamount%7D%7D',
+            options: {
+              product: {
+                styles: {
+                  product: {
+                    "@media (min-width: 601px)": {
+                      "max-width": "100%",
+                      "margin": "0 auto",
+                    }
                   }
+                },
+                text: {
+                  button: "Add to Cart"
                 }
               },
-              text: {
-                button: "Add to Cart"
-              }
-            },
-            cart: {
-              text: {
-                total: "Subtotal",
-                button: "Checkout"
+              cart: {
+                text: {
+                  total: "Subtotal",
+                  button: "Checkout"
+                }
               }
             }
-          }
+          });
         });
       });
-    });
-  }
-})();
-</script>
+    }
+  })();
+  </script>
+
+</body>
+</html>
