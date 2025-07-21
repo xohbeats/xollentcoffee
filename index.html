@@ -373,7 +373,14 @@
       fnames[1] = 'FNAME'; ftypes[1] = 'text';
     })(jQuery);
     var $mcj = jQuery.noConflict(true);
+
+<script>
+  // Redirect #menu anchor to /our-coffee.html
+  if (window.location.hash === "#menu") {
+    window.location.href = "/our-coffee.html";
+  }    
   </script>
   <script src="cart.js" defer></script>
+  
 </body>
 </html>
