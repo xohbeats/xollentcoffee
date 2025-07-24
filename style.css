@@ -481,37 +481,31 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 6rem 2rem;
-  text-align: center;
-  background: 
-    linear-gradient(to bottom, rgba(254, 246, 228, 0.8), rgba(255, 255, 255, 0.95)),
-    url('images/fuel.jpg') center/cover no-repeat;
+  gap: 1.5rem; /* vertical spacing between text and button */
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, #fef6e4, #fff);
   color: #4b3621;
-  backdrop-filter: blur(2px);
-  border-radius: 1rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
 }
+
 
 .hero-title {
   font-family: 'Orbitron', sans-serif;
-  font-size: 3rem;
+  font-size: 2.75rem;
   color: #6f4e37;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 6px rgba(254, 246, 228, 0.7);
+  text-shadow: 1px 1px 0 #fef6e4;
 }
 
 .hero-subtitle {
   font-family: 'Inter', sans-serif;
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   color: #4b3621;
   margin-bottom: 2rem;
-  max-width: 700px;
 }
 
 .explore-button {
-  margin-top: 1.5rem;
+  margin-top: 1.5rem; /* add this */
   background-color: #6f4e37;
   color: #fef6e4;
   font-size: 1rem;
@@ -520,14 +514,13 @@ footer {
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  box-shadow: 0 0 15px rgba(111, 78, 55, 0.4);
-  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(111, 78, 55, 0.5);
+  transition: background 0.3s ease;
 }
 
 .explore-button:hover {
   background-color: #4b3621;
   color: #ffffff;
-  box-shadow: 0 0 20px rgba(111, 78, 55, 0.6);
 }
 
 nav .logo img {
