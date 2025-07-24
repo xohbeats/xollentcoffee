@@ -518,8 +518,13 @@ footer {
   transition: background 0.3s ease;
 }
 
-
 .explore-button:hover {
   background-color: #4b3621;
   color: #ffffff;
+}
+
+nav .logo img {
+  width: 150px;
+  height: auto;
+  display: block;
 }
