@@ -1,284 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Xollent Coffee | Crafted Focus for Creative Minds</title>
-  <meta name="description" content="Xollent Coffee offers premium small-batch coffee blends, roasted fresh and shipped direct. Designed to energize creators, night owls, and makers alike.">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xollent Coffee | Crafted Focus for Creative Minds</title>
+    <meta name="description" content="Xollent Coffee offers premium small-batch coffee blends, roasted fresh and shipped direct. Designed to energize creators, night owls, and makers alike." />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon/Xollent.png" sizes="512x512" />
+    <link rel="icon" type="image/png" href="favicon/Xollent.png" sizes="512x512" />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="cart.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<!-- Navbar -->
-<nav>
-  <div class="container">
-    <a href="#" class="logo">
-      <img src="images/Xollent.png" alt="Xollent Coffee Logo" style="width:150px; height:auto; display:block;" />
-    </a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="our-coffee.html">Our Coffee</a></li> <!-- Updated here -->
-      <li><a href="#mission">Our Mission</a></li>
-      <li><a href="#join-the-creatives">Join The Creatives</a></li>
-      <li><a href="meet-the-creatives.html">Meet The Creatives</a></li>
-    </ul>
-  </div>
-</nav>
-
-<section class="hero-text">
-  <h1 class="hero-title">Crafted Focus for Creative Minds</h1>
-  <a href="our-coffee.html" class="explore-button">Explore Our Creative Blends</a
-    <p class="hero-subtitle">Fuel Your Creative.</p>                                                                              
-</section>
-
-  <!-- Video Section -->
-  <section class="video-highlight" aria-label="Brand Showcase Video">
-    <div class="container">
-      <video controls muted playsinline style="width: 100%; height: auto; border-radius: 12px;">
-        <source src="xollentcoffee.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="about-section" id="about">
-    <div class="container">
-      <h2>Why Xollent?</h2>
-      <p>Hey, I’m D’Andre Spears — but you might know me as XoH! Beats. I started Xollent Coffee right here in my creative space, the same studio where I produce music, write stories, and bring ideas to life. This brand was born during one of those long, late nights — you know the kind — where inspiration strikes, but only if you’re locked in and fueled up.</p>
-      <p>Xollent Coffee is for us — the creators, the night owls, the early risers, and everyone chasing something bigger. I’m proud to say every blend is thoughtfully chosen, small-batch roasted, and made with people like you in mind.</p>
-      <p>Thanks for trusting my brand. I’ve got you every step of the way.<br>— D’Andre / XoH! Beats ☕✨</p>
-    </div>
-    
-  </section>
- <!-- Fixed Xollent Crafted Mugs Section -->
-<section id="product-gallery-section" style="padding: 4rem 0; background-color: #fff;">
-  <div class="container">
-    <h2 style="color: #4B3621; text-align: center; margin-bottom: 2rem;">Xollent Crafted Mugs</h2>
-
-    <section id="printful-store" style="max-width: 900px; margin: 0 auto; padding: 2rem; background: #F6EFE8; border-radius: 12px;">
-      <h2 style="text-align: center; font-size: 2rem; font-weight: 700; margin-bottom: 1rem;">Xollent Coffee Mugs</h2>
-
-      <p style="font-size: 1.1rem; line-height: 1.5; max-width: 600px; margin: 0 auto 2rem auto; text-align: center;">
-        Fuel your creative grind with every sip! This ceramic mug adds a bold splash of color and energy to your daily coffee routine — designed for the thinkers, makers, and dreamers who turn ideas into reality. Not just a mug, it’s a daily reminder to keep creating!
-      </p>
-
-      <div style="text-align: center; margin-bottom: 2rem;">
-        <a href="https://xollentcoffee.printful.me/" target="_blank" rel="noopener noreferrer"
-           style="background-color: #F5E6D3; color: #6F4E37; padding: 0.85rem 2.5rem; font-weight: 700; border-radius: 30px; text-decoration: none; font-size: 1rem; box-shadow: 0 4px 8px rgba(111, 78, 55, 0.3); transition: background-color 0.3s ease;">
-          See More Info
-        </a>
-      </div>
-
-      <div class="product-gallery">
-        <!-- Product 1 -->
-        <div class="product-card">
-          <img src="images/morning-tempo.webp" alt="Morning Tempo">
-          <h3 class="product-title">Morning Tempo</h3>
-          <div class="product-price">$12.99</div>
-          <a href="https://xollentcoffee.printful.me/product/morning-tempo" class="buy-button">Buy Now</a>
+    <header class="site-header">
+        <div class="container">
+            <nav class="main-nav">
+                <a href="#" class="logo">
+                    <img src="images/Xollent.png" alt="Xollent Coffee Logo" />
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="our-coffee.html">Our Coffee</a></li>
+                    <li><a href="#products">Mugs</a></li>
+                    <li><a href="meet-the-creatives.html">Meet The Creatives</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <!-- Product 2 -->
-        <div class="product-card">
-          <img src="images/the-creative.webp" alt="The Creative">
-          <h3 class="product-title">The Creative</h3>
-          <div class="product-price">$12.99</div>
-          <a href="https://xollentcoffee.printful.me/product/the-creative" class="buy-button">Buy Now</a>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Crafted Focus for Creative Minds</h1>
+                    <p class="hero-subtitle">Fuel your creative flow with small-batch coffee, roasted fresh and shipped directly to you.</p>
+                    <a href="our-coffee.html" class="btn btn-primary">Explore Creative Blends</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-highlight">
+            <div class="container">
+                <video controls muted playsinline>
+                    <source src="xollentcoffee.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">Why Xollent?</h2>
+                <div class="about-content">
+                    <p>Hey, I’m D’Andre Spears—but you might know me as XoH! Beats. I started Xollent Coffee right here in my creative space, the same studio where I produce music, write stories, and bring ideas to life. This brand was born during one of those long, late nights where inspiration strikes, but only if you’re locked in and fueled up.</p>
+                    <p>Xollent Coffee is for us—the creators, the night owls, and everyone chasing something bigger. Every blend is thoughtfully chosen, small-batch roasted, and made with people like you in mind.</p>
+                    <p>Thanks for trusting my brand. I’ve got you every step of the way.<br>— D’Andre / XoH! Beats ☕✨</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="products-section">
+            <div class="container">
+                <h2 class="section-title">Xollent Crafted Mugs</h2>
+                <p class="section-subtitle">A daily reminder to keep creating! Fuel your grind with a mug designed for the thinkers, makers, and dreamers.</p>
+                <div class="product-gallery">
+                    <div class="product-card">
+                        <img src="images/morning-tempo.webp" alt="Morning Tempo Mug">
+                        <h3 class="product-title">Morning Tempo</h3>
+                        <div class="product-price">$12.99</div>
+                        <a href="https://xollentcoffee.printful.me/product/morning-tempo" class="btn btn-secondary">Buy Now</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/the-creative.webp" alt="The Creative Mug">
+                        <h3 class="product-title">The Creative</h3>
+                        <div class="product-price">$12.99</div>
+                        <a href="https://xollentcoffee.printful.me/product/the-creative" class="btn btn-secondary">Buy Now</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/rhythmic-cocoa.webp" alt="Rhythmic Cocoa Mug">
+                        <h3 class="product-title">Rhythmic Cocoa</h3>
+                        <div class="product-price">$12.99</div>
+                        <a href="https://xollentcoffee.printful.me/product/rhythmic-cocoa" class="btn btn-secondary">Buy Now</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/creator-fuel.webp" alt="Creator Fuel Mug">
+                        <h3 class="product-title">Creator Fuel</h3>
+                        <div class="product-price">$12.99</div>
+                        <a href="https://xollentcoffee.printful.me/product/creator-fuel" class="btn btn-secondary">Buy Now</a>
+                    </div>
+                </div>
+                 <div class="more-info-link">
+                    <a href="https://xollentcoffee.printful.me/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">See More Info</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="join-the-creatives" class="newsletter-section">
+            <div class="container">
+                <h2 class="newsletter-title">Join The Creative Community</h2>
+                <p>Be the first to know about new blends, LTO mugs, and community events.</p>
+                <form id="mc-form" action="https://us17.list-manage.com/subscribe/post?u=2c84de1626c94f691cf23fa67&id=bb06cc2619" method="post" target="hidden-iframe" novalidate>
+                    <div class="form-inputs">
+                        <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Your email address" required aria-label="Email Address">
+                        <button type="submit" class="btn btn-accent">Join Now</button>
+                    </div>
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                        <input type="text" name="b_2c84de1626c94f691cf23fa67_bb06cc2619" tabindex="-1" value="">
+                    </div>
+                </form>
+                 <p class="privacy-note">We respect your privacy. No spam, ever.</p>
+            </div>
+        </section>
+        
+        <iframe name="hidden-iframe" style="display:none;"></iframe>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Xollent Coffee. Made for Creatives. All rights reserved.</p>
         </div>
+    </footer>
 
-        <!-- Product 3 -->
-        <div class="product-card">
-          <img src="images/rhythmic-cocoa.webp" alt="Rhythmic Cocoa">
-          <h3 class="product-title">Rhythmic Cocoa</h3>
-          <div class="product-price">$12.99</div>
-          <a href="https://xollentcoffee.printful.me/product/rhythmic-cocoa" class="buy-button">Buy Now</a>
-        </div>
+    <script>
+        const form = document.getElementById('mc-form');
+        if (form) {
+            form.addEventListener('submit', () => {
+                setTimeout(() => {
+                    window.location.href = 'thankyou.html';
+                }, 1500);
+            });
+        }
+    </script>
 
-        <!-- Product 4 -->
-        <div class="product-card">
-          <img src="images/creator-fuel.webp" alt="Creator Fuel">
-          <h3 class="product-title">Custom Mugs</h3>
-          <div class="product-price">$12.99</div>
-          <a href="https://xollentcoffee.printful.me/product/creator-fuel" class="buy-button">Buy Now</a>
-        </div>
-
-    </section>
-  </div>
-</section>
-
-<!-- Mission Section -->
-<section class="mission-section" id="mission" style="background-color: #fdf7f2; padding: 4rem 1.5rem; margin-top: 4rem;">
-  <div class="container">
-    <h2 style="text-align: center; color: #4B3621;">Our Mission</h2>
-    <p style="text-align: center; max-width: 750px; margin: 0 auto; font-size: 1.1rem; color: #4B3621;">
-      Xollent exists to power up creative minds everywhere. We partner with trusted U.S. roasters to deliver fresh, small-batch coffee with ethical sourcing and fast shipping—so your inspiration never has to wait for a refill.
-    </p>
-  </div>
-</section>
-
-<!-- Signup Section -->
-<section class="signup-section" id="join-the-creatives" style="background: #121212; padding: 3rem 1.5rem; color: #eee; font-family: 'Orbitron', sans-serif; max-width: 420px; margin: 4rem auto; border-radius: 12px; box-shadow: 0 0 15px #0ff99a55;">
-  <h2 style="color: #0ff; font-weight: 700; text-align: center; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 2px;">
-    Stay Connected
-  </h2>
-  <!-- Signup form goes here -->
-</section>
-
-  >
-    Join the Creative Community
-  </h2>
-  <p style="text-align: center; margin-bottom: 2rem; font-weight: 500;">
-    Be the first to know when new blends drop, LTO coffee mugs launch, and community events happen.
-  </p>
-
-  <form
-    id="mc-form"
-    action="https://us17.list-manage.com/subscribe/post?u=2c84de1626c94f691cf23fa67&id=bb06cc2619"
-    method="post"
-    target="hidden-iframe"
-    novalidate
-    style="display: flex; flex-direction: column; gap: 1rem;"
-  >
-    <input
-      type="text"
-      name="FNAME"
-      id="mce-FNAME"
-      placeholder="Your first name (optional)"
-      style="
-        padding: 0.75rem;
-        border-radius: 6px;
-        border: 1px solid #0ff;
-        background: #222;
-        color: #eee;
-        font-size: 1rem;
-        font-family: 'Orbitron', sans-serif;
-        width: 100%;
-      "
-      aria-label="First Name (optional)"
-    />
-
-    <input
-      type="email"
-      name="EMAIL"
-      id="mce-EMAIL"
-      placeholder="Your email"
-      required
-      style="
-        padding: 0.75rem;
-        border-radius: 6px;
-        border: 1px solid #0ff;
-        background: #222;
-        color: #eee;
-        font-size: 1rem;
-        font-family: 'Orbitron', sans-serif;
-        width: 100%;
-      "
-      aria-label="Email Address"
-    />
-
-    <!-- Honeypot (bot trap) -->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true">
-      <input
-        type="text"
-        name="b_2c84de1626c94f691cf23fa67_bb06cc2619"
-        tabindex="-1"
-        value=""
-      />
-    </div>
-
-    <button
-      type="submit"
-      style="
-        background: #0ff;
-        color: #121212;
-        font-weight: 700;
-        border-radius: 6px;
-        border: none;
-        padding: 0.75rem;
-        font-size: 1.1rem;
-        cursor: pointer;
-        font-family: 'Orbitron', sans-serif;
-        transition: background-color 0.3s ease;
-      "
-      onmouseover="this.style.backgroundColor='#0ababa'"
-      onmouseout="this.style.backgroundColor='#0ff'"
-    >
-      Join The Xollent Community
-    </button>
-  </form>
-</section>
-
-<!-- Hidden iframe for submission -->
-<iframe name="hidden-iframe" style="display:none;"></iframe>
-
-<script>
-  const form = document.getElementById('mc-form');
-  form.addEventListener('submit', (e) => {
-    // Redirect after a small delay to allow Mailchimp to process
-    setTimeout(() => {
-      window.location.href = 'thankyou.html';
-    }, 1500);
-  });
-</script>
-
-
-    <!-- Responses -->
-    <div id="mce-responses" class="clear" style="margin-top: 1rem;">
-      <div class="response" id="mce-error-response" style="display:none; color: #ff5555; font-weight: 700;"></div>
-      <div class="response" id="mce-success-response" style="display:none; color: #0ff; font-weight: 700;"></div>
-    </div>
-
-    <p style="margin-top: 1.5rem; font-size: 0.85rem; color: #666; text-align: center;">
-      We respect your privacy. No spam, ever.
-    </p>
-  </section>
-
-  <!-- Cart Modal -->
-  <div id="cart-modal" class="cart-modal hidden" aria-hidden="true">
-    <div class="cart-content" role="dialog" aria-modal="true">
-      <h3>Your Cart</h3>
-      <ul id="cart-items"></ul>
-      <p>Total: $<span id="cart-total">0.00</span></p>
-      <a href="https://yourdripshippercheckout.com" class="btn-primary" target="_blank">Proceed to Checkout</a>
-      <button id="close-cart" class="btn-secondary">Close</button>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 Xollent Coffee. Made for Creatives. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
-  <script src="https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-  <script>
-    (function($) {
-      window.fnames = []; window.ftypes = [];
-      fnames[0] = 'EMAIL'; ftypes[0] = 'email';
-      fnames[1] = 'FNAME'; ftypes[1] = 'text';
-    })(jQuery);
-    var $mcj = jQuery.noConflict(true);
-
-<script>
-  // Redirect #menu anchor to /our-coffee.html
-  if (window.location.hash === "#menu") {
-    window.location.href = "/our-coffee.html";
-  }    
-  </script>
-  <script src="cart.js" defer></script>
-  
 </body>
 </html>
