@@ -38,6 +38,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 16px; /* Base font size */
 }
 
 body {
@@ -188,7 +189,7 @@ ul {
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding: 6rem 1.5rem;
+    padding: 8rem 1.5rem; /* Increased padding */
     z-index: 1;
 }
 
@@ -204,7 +205,7 @@ ul {
 }
 
 .hero-content {
-    max-width: 1000px; /* Increased width to accommodate bestsellers */
+    max-width: 1000px;
     margin: 0 auto;
     position: relative;
     z-index: 2;
@@ -286,7 +287,7 @@ ul {
 
 /* Video Section */
 .video-highlight {
-    padding: 4rem 0;
+    padding: 5rem 0;
     background-color: #fff;
 }
 
@@ -433,15 +434,37 @@ ul {
 /* ================================
    Media Queries for Responsiveness
    ================================ */
+
+/* For TVs and Large Desktops */
+@media (min-width: 1600px) {
+    html {
+        font-size: 18px; /* Increase base font size */
+    }
+
+    .hero {
+        padding: 10rem 1.5rem;
+    }
+
+    .container {
+        max-width: 1400px; /* Allow content to spread out more */
+    }
+}
+
+/* For Tablets (Portrait) and Large Phones */
 @media (max-width: 1024px) {
     .hero-content {
         max-width: 90%;
     }
+
+    .hero .hero-title {
+        font-size: 3rem;
+    }
 }
 
+/* For most Tablets */
 @media (max-width: 768px) {
     .section-title { font-size: 2rem; }
-    .hero-title { font-size: 2.75rem; }
+    .hero .hero-title { font-size: 2.75rem; }
 
     .main-nav {
         flex-direction: column;
@@ -460,9 +483,13 @@ ul {
     }
 }
 
+/* For Mobile Phones */
 @media (max-width: 480px) {
-    .hero-title { font-size: 2.2rem; }
-    .hero-subtitle { font-size: 1.1rem; }
+    .hero {
+        padding: 6rem 1.5rem;
+    }
+    .hero .hero-title { font-size: 2.2rem; }
+    .hero .hero-subtitle { font-size: 1.1rem; }
     
     .btn {
         padding: 0.75rem 1.5rem;
