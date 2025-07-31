@@ -188,8 +188,9 @@ ul {
     background-image: url('/images/fuel.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: scroll; /* Ensures smoothest scrolling on mobile */
     text-align: center;
-    padding: 8rem 1.5rem; /* Increased padding */
+    padding: 8rem 1.5rem;
     z-index: 1;
 }
 
@@ -461,7 +462,7 @@ ul {
     }
 }
 
-/* For most Tablets */
+/* For most Tablets and smaller devices */
 @media (max-width: 768px) {
     .section-title { font-size: 2rem; }
     .hero .hero-title { font-size: 2.75rem; }
@@ -480,6 +481,11 @@ ul {
     .form-inputs {
         flex-direction: column;
         gap: 1rem;
+    }
+
+    /* This rule fixes the jumbled bestseller layout on tablets and phones */
+    .bestseller-grid {
+        grid-template-columns: 1fr;
     }
 }
 
