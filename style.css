@@ -449,3 +449,9 @@ ul {
         text-align: center;
     }
 }
+.bestseller-grid {
+    display: grid;
+    /* This updated line handles 2 or 3 items gracefully */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 1.5rem;
+}
